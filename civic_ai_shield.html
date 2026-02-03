@@ -16,34 +16,30 @@
         }
 
         :root {
-            --black-deep: #0a0a0a;
-            --black-bg: #111111;
-            --black-card: #1a1a1a;
-            --black-lighter: #222222;
-            --red-primary: #dc2626;
-            --red-bright: #ef4444;
-            --red-dark: #991b1b;
-            --red-glow: rgba(220, 38, 38, 0.3);
-            --text-primary: #ffffff;
-            --text-secondary: #a3a3a3;
-            --text-dim: #737373;
-            --glass-bg: rgba(26, 26, 26, 0.8);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --success: #10b981;
-            --warning: #f59e0b;
-            --border-subtle: rgba(255, 255, 255, 0.05);
+            --black-deep: #050505;
+            --black-bg: #0b0b0b;
+            --black-card: #121212;
+            --black-lighter: #1a1a1a;
+            --red-primary: #e10600;
+            --red-bright: #ff1a1a;
+            --red-dark: #8b0000;
+            --red-glow: rgba(225, 6, 0, 0.5);
+            --text-primary: #f5f5f5;
+            --text-secondary: #999999;
+            --text-dim: #666666;
+            --glass-bg: rgba(18, 18, 18, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --success: #00ff88;
+            --warning: #ffaa00;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
             background: var(--black-deep);
-            background-image: radial-gradient(circle at 50% 0%, rgba(220, 38, 38, 0.03) 0%, transparent 50%);
             color: var(--text-primary);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            line-height: 1.6;
-            letter-spacing: -0.01em;
         }
 
         /* Custom Scrollbar */
@@ -192,13 +188,13 @@
 
         .login-card {
             position: relative;
-            width: 480px;
-            padding: 60px 50px;
+            width: 450px;
+            padding: 50px 45px;
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
+            backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 80px rgba(220, 38, 38, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 0 60px rgba(225, 6, 0, 0.2);
             animation: slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -218,24 +214,19 @@
 
         .login-logo {
             text-align: center;
-            margin-bottom: 16px;
-            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-size: 3em;
+        }
+
+        .login-title {
+            font-size: 2em;
             font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
             background: linear-gradient(135deg, var(--red-primary), var(--red-bright));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: 3px;
-            filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.3));
-        }
-
-        .login-title {
-            font-size: 1.875em;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
         }
 
         .login-subtitle {
@@ -276,20 +267,19 @@
         .form-input {
             width: 100%;
             padding: 14px 18px;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1.5px solid var(--border-subtle);
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
             color: var(--text-primary);
-            font-size: 0.95em;
-            font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1em;
+            transition: all 0.3s ease;
         }
 
         .form-input:focus {
             outline: none;
             border-color: var(--red-primary);
-            background: rgba(255, 255, 255, 0.06);
-            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1), 0 0 20px rgba(220, 38, 38, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 15px rgba(225, 6, 0, 0.2);
         }
 
         .toggle-password {
@@ -506,18 +496,17 @@
         }
 
         .top-nav {
-            height: 72px;
+            height: 75px;
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
-            border-bottom: 1px solid var(--border-subtle);
-            padding: 0 32px;
+            backdrop-filter: blur(25px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0 35px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
         }
 
         .nav-left {
@@ -530,9 +519,8 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.25em;
-            font-weight: 600;
-            letter-spacing: -0.02em;
+            font-size: 1.6em;
+            font-weight: 700;
         }
 
         .nav-logo-text {
@@ -545,15 +533,15 @@
         .status-live {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 7px 16px;
-            background: rgba(220, 38, 38, 0.08);
-            border: 1px solid rgba(220, 38, 38, 0.2);
-            border-radius: 24px;
-            font-size: 0.75em;
+            gap: 10px;
+            padding: 8px 18px;
+            background: rgba(225, 6, 0, 0.1);
+            border: 1px solid rgba(225, 6, 0, 0.3);
+            border-radius: 20px;
+            font-size: 0.85em;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
         }
 
         .status-dot {
@@ -624,28 +612,26 @@
         }
 
         .sidebar {
-            width: 260px;
+            width: 280px;
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
-            border-right: 1px solid var(--border-subtle);
-            padding: 24px 16px;
+            backdrop-filter: blur(25px);
+            border-right: 1px solid var(--glass-border);
+            padding: 35px 20px;
             overflow-y: auto;
         }
 
         .menu-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            margin-bottom: 6px;
-            border-radius: 8px;
+            gap: 15px;
+            padding: 16px 22px;
+            margin-bottom: 10px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             color: var(--text-secondary);
             position: relative;
             overflow: hidden;
-            font-size: 0.875em;
-            font-weight: 500;
         }
 
         .menu-item::before {
@@ -671,11 +657,10 @@
         }
 
         .menu-item.active {
-            background: rgba(220, 38, 38, 0.12);
-            color: var(--red-bright);
-            font-weight: 600;
-            border-left: 3px solid var(--red-primary);
-            padding-left: 13px;
+            background: linear-gradient(135deg, var(--red-primary), var(--red-bright));
+            color: white;
+            transform: translateX(6px);
+            box-shadow: 0 5px 25px var(--red-glow);
         }
 
         .menu-item.active::before {
@@ -748,11 +733,11 @@
 
         .stat-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
-            border: 1px solid var(--border-subtle);
-            border-radius: 16px;
-            padding: 28px 24px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
+            padding: 30px;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
             animation: slideUp 0.6s ease-out;
@@ -778,9 +763,9 @@
         }
 
         .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-            border-color: var(--glass-border);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(225, 6, 0, 0.25);
+            border-color: rgba(225, 6, 0, 0.4);
         }
 
         .stat-icon {
@@ -797,20 +782,22 @@
 
         .stat-label {
             color: var(--text-secondary);
-            font-size: 0.8125em;
+            font-size: 0.9em;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             font-weight: 600;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
 
         .stat-value {
-            font-size: 2.5em;
-            font-weight: 700;
-            color: var(--text-primary);
+            font-size: 3em;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--red-primary), var(--red-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             animation: countUp 1s ease-out;
             line-height: 1;
-            letter-spacing: -0.03em;
         }
 
         /* Confidence Panel */
@@ -898,18 +885,18 @@
 
         .camera-card {
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--glass-border);
+            border-radius: 14px;
             overflow: hidden;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s ease;
         }
 
         .camera-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
-            border-color: var(--glass-border);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(225, 6, 0, 0.25);
+            border-color: rgba(225, 6, 0, 0.4);
         }
 
         .camera-preview {
@@ -1070,25 +1057,26 @@
 
         th {
             text-align: left;
-            padding: 14px 20px;
+            padding: 16px 20px;
             color: var(--text-secondary);
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            font-size: 0.75em;
-            letter-spacing: 0.5px;
+            font-size: 0.85em;
+            letter-spacing: 1px;
             background: rgba(255, 255, 255, 0.02);
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 2px solid var(--red-primary);
         }
 
         tbody tr {
             background: var(--glass-bg);
-            backdrop-filter: blur(40px) saturate(180%);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(25px);
+            transition: all 0.3s ease;
         }
 
         tbody tr:hover {
-            background: rgba(255, 255, 255, 0.04);
-            transform: translateX(0);
+            background: rgba(225, 6, 0, 0.08);
+            transform: translateX(6px);
+            box-shadow: -4px 0 0 var(--red-primary);
         }
 
         tbody tr.high-severity {
@@ -1618,7 +1606,7 @@
     <div id="loginPage">
         <div class="login-bg"></div>
         <div class="login-card">
-            <div class="login-logo">◆ SHIELD ◆</div>
+            <div class="login-logo">🛡️</div>
             <h1 class="login-title">Civic AI Shield</h1>
             <p class="login-subtitle">Secure Surveillance Access Portal</p>
             <p class="login-auth-text">⚠️ Authorized Personnel Only</p>
@@ -1635,7 +1623,7 @@
                     <label for="password">Password</label>
                     <div class="input-wrapper">
                         <input type="password" id="password" class="form-input" placeholder="Enter password" required>
-                        <span class="toggle-password" onclick="togglePassword()">SHOW</span>
+                        <span class="toggle-password" onclick="togglePassword()">👁️</span>
                     </div>
                 </div>
                 
@@ -1667,7 +1655,8 @@
         <div class="top-nav">
             <div class="nav-left">
                 <div class="nav-logo">
-                    <span class="nav-logo-text">◆ Civic AI Shield</span>
+                    <span>🛡️</span>
+                    <span class="nav-logo-text">Civic AI Shield</span>
                 </div>
                 <div class="status-live">
                     <span class="status-dot"></span>
@@ -1676,36 +1665,36 @@
             </div>
             <div class="nav-right">
                 <div class="nav-datetime" id="datetime"></div>
-                <div class="nav-icon has-badge">▲</div>
-                <div class="nav-icon">●</div>
-                <div class="nav-icon" onclick="logout()">■</div>
+                <div class="nav-icon has-badge">🔔</div>
+                <div class="nav-icon">⚙️</div>
+                <div class="nav-icon" onclick="logout()">👤</div>
             </div>
         </div>
 
         <div class="dashboard-container">
             <div class="sidebar">
                 <div class="menu-item active" onclick="switchPage('overview')">
-                    <span class="menu-icon">▣</span>
+                    <span class="menu-icon"></span>
                     <span class="menu-text">Dashboard Overview</span>
                 </div>
                 <div class="menu-item" onclick="switchPage('live')">
-                    <span class="menu-icon">◉</span>
+                    <span class="menu-icon"></span>
                     <span class="menu-text">Live Detection</span>
                 </div>
                 <div class="menu-item" onclick="switchPage('analysis')">
-                    <span class="menu-icon">▶</span>
+                    <span class="menu-icon"></span>
                     <span class="menu-text">Video Analysis</span>
                 </div>
                 <div class="menu-item" onclick="switchPage('alerts')">
-                    <span class="menu-icon">▲</span>
+                    <span class="menu-icon"></span>
                     <span class="menu-text">Alerts & History</span>
                 </div>
                 <div class="menu-item" onclick="switchPage('health')">
-                    <span class="menu-icon">◆</span>
+                    <span class="menu-icon"></span>
                     <span class="menu-text">System Health</span>
                 </div>
                 <div class="menu-item" onclick="switchPage('settings')">
-                    <span class="menu-icon">●</span>
+                    <span class="menu-icon"></span>
                     <span class="menu-text">Settings</span>
                 </div>
             </div>
@@ -1718,22 +1707,22 @@
                     
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <div class="stat-icon">◉</div>
+                            <div class="stat-icon"></div>
                             <div class="stat-label">Total Cameras</div>
                             <div class="stat-value">24</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-icon">▣</div>
+                            <div class="stat-icon"></div>
                             <div class="stat-label">Active Live Streams</div>
                             <div class="stat-value">24</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-icon">▲</div>
+                            <div class="stat-icon"></div>
                             <div class="stat-label">Alerts Today</div>
                             <div class="stat-value">12</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-icon">◆</div>
+                            <div class="stat-icon"></div>
                             <div class="stat-label">System Integrity</div>
                             <div class="stat-value">99%</div>
                         </div>
@@ -1793,7 +1782,7 @@
                     </div>
                     
                     <div class="upload-zone" onclick="handleUpload()">
-                        <div class="upload-icon">▲</div>
+                        <div class="upload-icon">📤</div>
                         <h3 class="upload-title">Upload Video for AI Analysis</h3>
                         <p class="upload-subtitle">Drag and drop or click to select video file</p>
                     </div>
@@ -2066,11 +2055,11 @@
             </div>
             <div class="modal-body">
                 <div class="modal-preview">
-                    ◉
+                    📹
                     <div class="camera-scanline"></div>
                     <div class="camera-vignette"></div>
                     <div id="modalThreatBadge" class="camera-threat-badge" style="display: none;">
-                        <span>!</span>
+                        <span>⚠️</span>
                         <span id="modalThreatText">THREAT DETECTED</span>
                     </div>
                 </div>
@@ -2194,25 +2183,25 @@
             const grid = document.getElementById('cameraGrid');
             grid.innerHTML = cameras.map(cam => {
                 let badgeClass = 'badge-safe';
-                let badgeText = 'SAFE';
+                let badgeText = '✓ SAFE';
                 
                 if (cam.status === 'ALERT') {
                     badgeClass = 'badge-alert';
-                    badgeText = 'ALERT';
+                    badgeText = '🚨 ALERT';
                 } else if (cam.status === 'MONITORING') {
                     badgeClass = 'badge-monitoring';
-                    badgeText = 'MONITORING';
+                    badgeText = '👁️ MONITORING';
                 }
 
                 return `
                     <div class="camera-card" onclick="openCameraModal('${cam.id}')">
                         <div class="camera-preview">
-                            ◉
+                            📹
                             <div class="camera-scanline"></div>
                             <div class="camera-vignette"></div>
                             ${cam.status === 'ALERT' ? `
                                 <div class="camera-threat-badge">
-                                    <span>!</span>
+                                    <span>⚠️</span>
                                     <span>${cam.threat.toUpperCase()}</span>
                                 </div>
                             ` : ''}
